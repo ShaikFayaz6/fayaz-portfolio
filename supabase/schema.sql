@@ -101,7 +101,7 @@ insert into public.projects (title, description, technologies, github_url, featu
   'Financial Transaction Web Application',
   'Web-based financial transaction management system built with ASP.NET Core MVC. Implemented T-SQL stored procedures, EF Core code-first data models, unit/integration tests, and full Swagger documentation.',
   array['C#', 'ASP.NET Core MVC', '.NET 6', 'MS SQL Server', 'Entity Framework Core', 'ADO.NET', 'T-SQL', 'Swagger/OpenAPI', 'Git'],
-  'https://github.com/fayaz-shaik64',
+  'https://github.com/ShaikFayaz6/',
   true,
   1
 ),
