@@ -79,7 +79,7 @@ function extractContactErrorMessage(err: HttpErrorResponse): string {
             </div>
             <div class="info-row">
               <span class="info-label">GitHub</span>
-              <a href="https://github.com/fayaz-shaik64" target="_blank" rel="noopener">fayaz-shaik64</a>
+              <a href="https://github.com/ShaikFayaz6/" target="_blank" rel="noopener">fayaz-shaik64</a>
             </div>
           </div>
         </div>

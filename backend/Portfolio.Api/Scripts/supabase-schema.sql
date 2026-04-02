@@ -1,5 +1,4 @@
--- Run once in Supabase: SQL Editor → New query → Run
--- Full schema for Portfolio.Api (EF Core + Npgsql, quoted PascalCase columns).
+
 
 -- ── contact_messages ───────────────────────────────────────
 CREATE TABLE IF NOT EXISTS contact_messages (
@@ -60,7 +59,7 @@ SELECT
     'Portfolio Website',
     'Personal portfolio with Angular and ASP.NET Core.',
     ARRAY['C#', 'Angular', 'PostgreSQL']::text[],
-    'https://github.com/fayaz-shaik64',
+    'https://github.com/ShaikFayaz6/fayaz-portfolio',
     NULL,
     true,
     1
@@ -69,10 +68,10 @@ WHERE NOT EXISTS (SELECT 1 FROM projects LIMIT 1);
 INSERT INTO experience ("Company", "Role", "Location", "StartDate", "EndDate", "Description", "SortOrder")
 SELECT
     'HCLTech',
-    'Software Engineer',
-    'India',
-    '2021',
-    '2024',
+    'Graduate Engineer Trainee ',
+    'Noida, India',
+    'Nov 2022',
+    'July 2024',
     ARRAY['Full-stack development on enterprise web applications.']::text[],
     1
 WHERE NOT EXISTS (SELECT 1 FROM experience LIMIT 1);
