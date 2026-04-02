@@ -29,7 +29,7 @@ import { CommonModule } from '@angular/common';
           <span class="sep">·</span>
           <a href="https://linkedin.com/in/fayaz-shaik64" target="_blank" rel="noopener">LinkedIn</a>
           <span class="sep">·</span>
-          <a href="https://github.com/fayaz-shaik64" target="_blank" rel="noopener">GitHub</a>
+          <a href="https://github.com/ShaikFayaz6/" target="_blank" rel="noopener">GitHub</a>
         </div>
       </div>
       <div class="hero-scroll-hint">scroll</div>
