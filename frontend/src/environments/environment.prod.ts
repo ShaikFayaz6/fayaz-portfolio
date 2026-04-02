@@ -1,4 +1,5 @@
 export const environment = {
   production: true,
-  apiUrl: 'https://<YOUR_BACKEND_URL>'  // e.g. Railway, Render, or Azure App Service
+  // Local prod build: set to your Render URL. Vercel: set env var API_URL (inject-env.js overwrites this file at build time).
+  apiUrl: 'https://YOUR-SERVICE.onrender.com'
 };

@@ -6,6 +6,11 @@ using Portfolio.Api.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 
+// Render (and similar hosts) set PORT; Kestrel must listen on it.
+var port = Environment.GetEnvironmentVariable("PORT");
+if (!string.IsNullOrEmpty(port))
+    builder.WebHost.UseUrls($"http://0.0.0.0:{port}");
+
 // ── Services ──────────────────────────────────────────────
 builder.Services.AddDbContext<PortfolioDbContext>(opt =>
     opt.UseNpgsql(builder.Configuration.GetConnectionString("Supabase")));

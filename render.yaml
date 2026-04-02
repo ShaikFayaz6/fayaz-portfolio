@@ -1,0 +1,16 @@
+# Render Blueprint: deploy API + optional reference (edit env in dashboard)
+# https://render.com/docs/blueprint-spec
+services:
+  - type: web
+    name: portfolio-api
+    runtime: docker
+    dockerfilePath: ./backend/Portfolio.Api/Dockerfile
+    dockerContext: .
+    plan: free
+    envVars:
+      - key: ASPNETCORE_ENVIRONMENT
+        value: Production
+      - key: ConnectionStrings__Supabase
+        sync: false
+      - key: AllowedOrigins
+        sync: false
