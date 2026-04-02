@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
       <div class="footer-inner">
         <p>Fayaz Shaik &mdash; Full Stack .NET Developer</p>
         <div class="links">
-          <a href="https://github.com/fayaz-shaik64" target="_blank" rel="noopener">GitHub</a>
+          <a href="https://github.com/ShaikFayaz6/" target="_blank" rel="noopener">GitHub</a>
           <a href="https://linkedin.com/in/fayaz-shaik64" target="_blank" rel="noopener">LinkedIn</a>
           <a href="mailto:shaikfayaz0064@gmail.com">Email</a>
         </div>
