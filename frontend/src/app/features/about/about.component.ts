@@ -71,7 +71,7 @@ import { RouterLink } from '@angular/router';
             </div>
             <div class="contact-item">
               <span class="label">GitHub</span>
-              <a href="https://github.com/fayaz-shaik64" target="_blank" rel="noopener">fayaz-shaik64</a>
+              <a href="https://github.com/ShaikFayaz6/" target="_blank" rel="noopener">ShaikFayaz6</a>
             </div>
           </div>
         </div>
