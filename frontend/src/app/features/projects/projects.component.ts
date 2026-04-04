@@ -2,7 +2,6 @@ import { Component, inject, OnInit, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { PortfolioService } from '../../core/services/portfolio.service';
 import { Project } from '../../core/models/models';
-import { externalHref } from '../../core/utils/external-url';
 
 @Component({
   selector: 'app-projects',
@@ -31,11 +30,11 @@ import { externalHref } from '../../core/utils/external-url';
                   <div class="project-header">
                     <h2>{{ project.title }}</h2>
                     <div class="project-links">
-                      @if (externalHref(project.githubUrl); as gh) {
-                        <a [href]="gh" target="_blank" rel="noopener">GitHub →</a>
+                      @if (project.githubUrl) {
+                        <a [href]="project.githubUrl" target="_blank" rel="noopener">GitHub →</a>
                       }
-                      @if (externalHref(project.liveUrl); as live) {
-                        <a [href]="live" target="_blank" rel="noopener">Live →</a>
+                      @if (project.liveUrl) {
+                        <a [href]="project.liveUrl" target="_blank" rel="noopener">Live →</a>
                       }
                     </div>
                   </div>
@@ -104,7 +103,6 @@ import { externalHref } from '../../core/utils/external-url';
 })
 export class ProjectsComponent implements OnInit {
   private svc = inject(PortfolioService);
-  protected externalHref = externalHref;
   projects = signal<Project[]>([]);
   loading  = signal(true);
   error    = signal(false);

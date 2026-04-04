@@ -2,7 +2,6 @@ import { Component, inject, OnInit, signal } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { PortfolioService } from '../../core/services/portfolio.service';
 import { Project } from '../../core/models/models';
-import { externalHref } from '../../core/utils/external-url';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -65,11 +64,11 @@ import { CommonModule } from '@angular/common';
                   </div>
                 </div>
                 <div class="card-footer">
-                  @if (externalHref(project.githubUrl); as gh) {
-                    <a [href]="gh" target="_blank" rel="noopener" class="card-link">GitHub →</a>
+                  @if (project.githubUrl) {
+                    <a [href]="project.githubUrl" target="_blank" rel="noopener" class="card-link">GitHub →</a>
                   }
-                  @if (externalHref(project.liveUrl); as live) {
-                    <a [href]="live" target="_blank" rel="noopener" class="card-link">Live →</a>
+                  @if (project.liveUrl) {
+                    <a [href]="project.liveUrl" target="_blank" rel="noopener" class="card-link">Live →</a>
                   }
                 </div>
               </article>
@@ -230,7 +229,6 @@ import { CommonModule } from '@angular/common';
 })
 export class HomeComponent implements OnInit {
   private svc = inject(PortfolioService);
-  protected externalHref = externalHref;
   projects = signal<Project[]>([]);
   loading = signal(true);
 
