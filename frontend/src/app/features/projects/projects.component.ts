@@ -2,6 +2,7 @@ import { Component, inject, OnInit, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { PortfolioService } from '../../core/services/portfolio.service';
 import { Project } from '../../core/models/models';
+import { externalHref } from '../../core/utils/external-url';
 
 @Component({
   selector: 'app-projects',
@@ -103,6 +104,7 @@ import { Project } from '../../core/models/models';
 })
 export class ProjectsComponent implements OnInit {
   private svc = inject(PortfolioService);
+  protected externalHref = externalHref;
   projects = signal<Project[]>([]);
   loading  = signal(true);
   error    = signal(false);

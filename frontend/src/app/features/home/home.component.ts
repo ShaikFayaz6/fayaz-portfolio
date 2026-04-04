@@ -2,6 +2,7 @@ import { Component, inject, OnInit, signal } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { PortfolioService } from '../../core/services/portfolio.service';
 import { Project } from '../../core/models/models';
+import { externalHref } from '../../core/utils/external-url';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -229,6 +230,7 @@ import { CommonModule } from '@angular/common';
 })
 export class HomeComponent implements OnInit {
   private svc = inject(PortfolioService);
+  protected externalHref = externalHref;
   projects = signal<Project[]>([]);
   loading = signal(true);
 
