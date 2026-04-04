@@ -31,11 +31,11 @@ import { externalHref } from '../../core/utils/external-url';
                   <div class="project-header">
                     <h2>{{ project.title }}</h2>
                     <div class="project-links">
-                      @if (project.githubUrl) {
-                        <a [href]="project.githubUrl" target="_blank" rel="noopener">GitHub →</a>
+                      @if (externalHref(project.githubUrl); as gh) {
+                        <a [href]="gh" target="_blank" rel="noopener">GitHub →</a>
                       }
-                      @if (project.liveUrl) {
-                        <a [href]="project.liveUrl" target="_blank" rel="noopener">Live →</a>
+                      @if (externalHref(project.liveUrl); as live) {
+                        <a [href]="live" target="_blank" rel="noopener">Live →</a>
                       }
                     </div>
                   </div>

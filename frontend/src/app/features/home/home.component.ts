@@ -65,11 +65,11 @@ import { CommonModule } from '@angular/common';
                   </div>
                 </div>
                 <div class="card-footer">
-                  @if (project.githubUrl) {
-                    <a [href]="project.githubUrl" target="_blank" rel="noopener" class="card-link">GitHub →</a>
+                  @if (externalHref(project.githubUrl); as gh) {
+                    <a [href]="gh" target="_blank" rel="noopener" class="card-link">GitHub →</a>
                   }
-                  @if (project.liveUrl) {
-                    <a [href]="project.liveUrl" target="_blank" rel="noopener" class="card-link">Live →</a>
+                  @if (externalHref(project.liveUrl); as live) {
+                    <a [href]="live" target="_blank" rel="noopener" class="card-link">Live →</a>
                   }
                 </div>
               </article>
